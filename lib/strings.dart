@@ -16,4 +16,10 @@ class Strings {
   static String tutorial3Title = "Atente-se ao tempo de uso";
   static String tutorial3Message = "Cada viagem tem limite de duração de acordo com seu plano. Ao ultrapassar esse limite será cobrado uma tarifa adicional.";
   static String tutorial3Button = "beleza, vou ficar esperto!";
+  
+    // Tutorial 4
+  static String tutorial4Title = "Devolva sua bicicleta";
+  static String tutorial4Message = "Encontre uma vaga disponível em qualquer estação. Ao devolver, aguarde o aviso sonoro.\n\nNão dê mole, confirme se a bicicleta está travada, ela está sob sua responsabilidade!";
+  static String tutorial4Button = "Pronto! bora pedalar";
+
 }

@@ -9,7 +9,6 @@ class Tutorial1State extends StatelessWidget {
   Tutorial1State(this.dots, this.controller);
   @override
   Widget build(BuildContext context) {
-
     return Column(children: [
           Header(),
           Padding(

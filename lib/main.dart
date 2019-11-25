@@ -3,6 +3,7 @@ import 'package:transformer_page_view/transformer_page_view.dart';
 import 'tutorialScreens/tutorial1.dart';
 import 'tutorialScreens/tutorial2.dart';
 import 'tutorialScreens/tutorial3.dart';
+import 'tutorialScreens/tutorial4.dart';
 
 void main() => runApp(TutorialApp());
 
@@ -30,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 
 class MyHomePageState extends State<MyHomePage> {
   int _slideIndex = 0;
-  int _MAX_SCREENS = 3;
+  int _MAX_SCREENS = 4;
 
   final IndexController controller = IndexController();
 
@@ -90,7 +91,9 @@ class MyHomePageState extends State<MyHomePage> {
         case 1:
           return Tutorial2State(dots, controller);
         case 2:
-          return Tutorial3State(dots);
+          return Tutorial3State(dots, controller);
+        case 3:
+          return Tutorial4State(dots);
         default:
           return null;
       }
