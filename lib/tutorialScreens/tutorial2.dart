@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:transformer_page_view/transformer_page_view.dart';
 import 'package:tutorial/tutorial.dart';
 import 'package:tutorial/strings.dart';
 
 class Tutorial2State extends StatelessWidget {
   final Widget dots;
-  Tutorial2State(this.dots);
+  final IndexController controller;
+  Tutorial2State(this.dots, this.controller);
   @override
   Widget build(BuildContext context) {
 
@@ -17,7 +19,7 @@ class Tutorial2State extends StatelessWidget {
           dots,
           Padding(
             padding: EdgeInsets.only(top: 30),
-            child: Tutorial2Content()
+            child: Tutorial2Content(controller)
           )
       ]);
   }
@@ -25,6 +27,8 @@ class Tutorial2State extends StatelessWidget {
 }
 
 class Tutorial2Content extends StatelessWidget {
+  final IndexController controller;
+  Tutorial2Content(this.controller);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -37,7 +41,7 @@ class Tutorial2Content extends StatelessWidget {
           padding: EdgeInsets.only(left: 60, right: 60, bottom: 60),
           child: DescriptionText(Strings.tutorial2Message)
         ),
-        ButtonView(Strings.tutorial2Button)
+        Button2View(Strings.tutorial2Button, 2, controller)
       ]
     );
   }

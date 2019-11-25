@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'tutorialScreens/tutorial1.dart';
+import 'package:transformer_page_view/transformer_page_view.dart';
 import 'strings.dart';
 
 class Tutorial extends StatefulWidget {
@@ -102,6 +102,31 @@ class ButtonView extends StatelessWidget {
         colorBrightness: Brightness.dark,
         onPressed: () { 
           print("Cliquei no botão");
+        },),
+    );
+  }
+}
+
+class Button2View extends StatelessWidget {
+  final String text;
+  final int nextPosition;
+  final IndexController controller;
+  Button2View(this.text, this.nextPosition, this.controller);
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: MaterialButton(
+        height: 60,
+        minWidth: 370,
+        padding: EdgeInsets.symmetric(vertical: 19),
+        child: Text(text.toUpperCase()), 
+        elevation: 5,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+        color: Color(0XFFEC7000),
+        textColor: Colors.white,
+        colorBrightness: Brightness.dark,
+        onPressed: () { 
+          controller.move(nextPosition);
         },),
     );
   }

@@ -16,16 +16,12 @@ class TutorialApp extends StatelessWidget {
     // );
     return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
-          home: MyHomePage(title: 'Flutter Demo Home Page'),
+          home: MyHomePage(),
         );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  final String title;
-  MyHomePage({this.title});
-  
   @override
   MyHomePageState createState() {
     return new MyHomePageState();
@@ -57,7 +53,7 @@ class MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.end,
-              children: [ 
+              children: [
                 getScreen(info.index)
               ]
             )
@@ -90,9 +86,9 @@ class MyHomePageState extends State<MyHomePage> {
 
       switch (i) {
         case 0:
-          return Tutorial1State(dots);
+          return Tutorial1State(dots, controller);
         case 1:
-          return Tutorial2State(dots);
+          return Tutorial2State(dots, controller);
         case 2:
           return Tutorial3State(dots);
         default:
