@@ -3,6 +3,8 @@ import 'package:tutorial/tutorial.dart';
 import 'package:tutorial/strings.dart';
 
 class Tutorial1State extends StatelessWidget {
+  final Widget dots;
+  Tutorial1State(this.dots);
   @override
   Widget build(BuildContext context) {
 
@@ -12,6 +14,7 @@ class Tutorial1State extends StatelessWidget {
             padding: EdgeInsets.only(top: 10),
             child: ImageView('assets/images/tutorial1.png')
           ),
+          dots,
           Padding(
             padding: EdgeInsets.only(top: 30),
             child: Tutorial1Content()
